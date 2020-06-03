@@ -1,7 +1,8 @@
 import '../scss/main.scss';
+import moment from 'moment';
 
 /* place your code below */
-
+//borrowed from ...
 const allRanges = document.querySelectorAll(".range-wrapper");
 allRanges.forEach(wrap => {
   const range = wrap.querySelector(".range--js");
@@ -23,6 +24,19 @@ function setBubble(range, bubble) {
   // Sorta magic numbers based on size of the native UI thumb
   bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
 }
-
+//end
 
 console.log(`It's working!`);
+
+console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+
+
+const createContent = function() {
+    const element = document.querySelector('.current-date--js');
+    element.innerHTML = `${moment().format('LL')} ${moment().format('LTS')}`;
+};
+
+setInterval(createContent, 1000);
+createContent();
+console.log('działa?');
+
