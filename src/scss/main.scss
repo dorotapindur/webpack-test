@@ -71,10 +71,15 @@ main {
   text-transform: uppercase;
   color: #7d8e00;
   text-shadow:  -3px 3px 4px #4b5500, 
-               2px -2px 4px #9fb500;     
+               2px -2px 4px #9fb500; 
+  margin-bottom: 0;    
 }
 .practice-header {
   color: #1b1f00;
+}
+.current-date {
+  color: #9fb500;
+
 }
 .form {
   display: inline-block;
