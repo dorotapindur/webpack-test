@@ -8,12 +8,16 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   </head>
+
   <body>
-    <div class="embellishment embellishment--left">formularz</div>
-    <div class="embellishment embellishment--right">formularz</div>
     <main>
+        <div class="embellishment embellishment--left">formularz</div>
+        <div class="embellishment embellishment--right">formularz</div>
       <h1 class="main-header">formularz testowy</h1>
-      <p class="current-date current-date--js"></p>
+      <div class="date-and-mode">
+        <p id="output" class="current-date current-date--js"></p>
+        <button class="change-mode change-mode--js" aria-label="przełącz tryb">przełącz tryb</button>
+      </div>
       <form class="form" action="https://dev.cotenfrontend.pl" method="post">
         <p class="form__line">
           <label class="form__description" for="title">tytuł:</label>
@@ -94,12 +98,17 @@
           </p>
         </fieldset>
   
+        <div class="form__line form__line--color">
+          <label class="form__description" for="color">wybierz kolor:</label>
+          <input class="form__item form__item--color color--js" type="color" name="color" id="color">
+        </div>
+  
         <p class="form__line--essay">
           <label class="form__description--essay" for="essay">Napisz kilka słów o sobie:</label>
-          <textarea class="form__item form__item--essay" id="essay" name="essay"></textarea>
+          <textarea class="form__item form__item--essay" id="essay" type="text" name="essay"></textarea>
         </p>
   
-        <div class="form__line">
+        <div class="form__line--range">
           <label class="form__description--age" for="age">wiek:</label>
           <div class="range-wrapper range-wrapper--js">
           <input class="range range--js" id="age" type="range" name="age" min="18" max="118" list="years">
@@ -120,9 +129,9 @@
           </div>
         </div>
   
-        <p class="form__line form__line--photo">
+        <p class="form__line">
           <label class="form__description" for="photo">załącz swoje zdjęcie:</label>
-          <input class="form__item" id="photo" type="file" name="photo" accept=".jpg, .jpeg, .png">
+          <input class="form__item" id="photo" placeholder="załącz swoje zdjęcie" type="file" name="photo" accept=".jpg, .jpeg, .png">
         </p>
   
         <p class="form__line">
@@ -147,6 +156,6 @@
         
       </form>
     </main>
-    
+
   </body>
 </html>
